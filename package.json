@@ -1,0 +1,31 @@
+{
+  "name": "guide",
+  "version": "0.0.0",
+  "description": "Guides for your project",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yoshuawuyts/guide"
+  },
+  "keywords": [
+    "guide",
+    "styleguide",
+    "codeguide"
+  ],
+  "author": "Yoshua Wuyts <i@yoshuawuyts.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/yoshuawuyts/guide/issues"
+  },
+  "homepage": "https://github.com/yoshuawuyts/guide",
+  "dependencies": {
+    "gulp-rename": "^1.2.0",
+    "gulp-concat": "^2.2.0",
+    "gulp": "^3.6.2",
+    "gulp-myth": "^0.3.1",
+    "gulp-browserify": "^0.5.0"
+  }
+}
