@@ -3,13 +3,17 @@
  */
 
 var react = require('react');
+var sidebar = require('../modules/sidebar/sidebar');
 
 /**
  * Component
  */
 
 module.exports = react.createClass({
+  displayName: 'home',
   render: function() {
-    return react.DOM.div(null, 'hi')
+    return react.DOM.div({className: 'grid'}, 
+      sidebar()
+    )
   }
 });

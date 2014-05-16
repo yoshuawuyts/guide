@@ -3,4 +3,15 @@
  */
 
 var react = require('react');
-var router = require('page');
+
+/**
+ * Component
+ */
+
+module.exports = react.createClass({
+  displayName: 'sidebar',
+  render: function() {
+    return react.DOM.div({className: 'sidebar'}
+    )
+  }
+});

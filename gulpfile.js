@@ -23,8 +23,8 @@ gulp.task('styles', function() {
       'client/modules/index/!(reset)*.css', 
       'client/modules/!(index)**/*.css'
     ])
-    .pipe(myth())
     .pipe(concat('build.css'))
+    .pipe(myth())
     .pipe(gulp.dest('build'));
 });
 
