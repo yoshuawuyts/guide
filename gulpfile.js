@@ -76,3 +76,13 @@ gulp.task('default', [
   'assets',
   'watch'
 ]);
+
+/**
+ * Deploy
+ */
+
+gulp.task('deploy', [
+  'styles',
+  'modules',
+  'assets'
+]);
