@@ -5,6 +5,7 @@
  */
 
 var source = require('vinyl-source-stream');
+var livereload = require('gulp-livereload');
 var browserify = require('browserify');
 var concat = require('gulp-concat');
 var myth = require('gulp-myth');
@@ -51,11 +52,29 @@ gulp.task('assets', function() {
 });
 
 /**
+ * Watch for file changes
+ */
+
+gulp.task('watch', function() {
+  var server = livereload();
+
+  var reload = function(file) {
+    server.changed(file.path);
+  };
+
+  gulp.watch(['client/**/*.js', 'client/**/**/*.js', 'client/**/**/**/*.js'], ['modules']);
+  gulp.watch('client/modules/**/*.css', ['styles']);
+  gulp.watch('client/modules/**/*.tff', ['assets']);
+  gulp.watch(['build/**']).on('change', reload);
+});
+
+/**
  * Default
  */
 
 gulp.task('default', [
   'styles',
   'modules',
-  'assets'
+  'assets',
+  'watch'
 ]);
