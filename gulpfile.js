@@ -4,8 +4,8 @@
  * Module dependencies
  */
 
-var browserify = require('gulp-browserify');
-var rename = require('gulp-rename');
+var source = require('vinyl-source-stream');
+var browserify = require('browserify');
 var concat = require('gulp-concat');
 var myth = require('gulp-myth');
 var gulp = require('gulp');
@@ -34,15 +34,14 @@ gulp.task('styles', function() {
  */
 
 gulp.task('modules', function() {
-  gulp
-    .src('client/modules/index/index.js')
-    .pipe(browserify({buffer: false, debug: true}))
-    .pipe(rename('build.js'))
+  browserify('./client/modules/index/index.js')
+    .bundle({debug: true})
+    .pipe(source('build.js'))
     .pipe(gulp.dest('build/'));
 });
 
 /**
- * Copy files
+ * Copy assets
  */
 
 gulp.task('assets', function() {

@@ -601,14 +601,6 @@ table {
   font-style: normal;
 }
 
-h1 {
-  height: 200px;
-}
-
-.white {
-  color: white;
-}
-
 /**
  * Container
  */
@@ -659,7 +651,7 @@ h1 {
 }
 
 /**
- * Sidebar section headings
+ * Sidebar section heading
  */
 
 li.sidebar-headline,
@@ -676,7 +668,7 @@ li.sidebar-headline a:hover {
 }
 
 /**
- * Sidebar main title
+ * Sidebar main heading
  */
 
 .sidebar-title a {
