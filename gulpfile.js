@@ -56,10 +56,8 @@ gulp.task('assets', function() {
  */
 
 gulp.task('watch', function() {
-  var server = livereload();
-
   var reload = function(file) {
-    server.changed(file.path);
+    livereload().changed(file.path);
   };
 
   gulp.watch(['client/**/*.js', 'client/**/**/*.js', 'client/**/**/**/*.js'], ['modules']);
