@@ -58,10 +58,16 @@ module.exports = react.createClass({
           ),
           react.DOM.section(null,
             react.DOM.li(null,
-              react.DOM.a({href: '/link'}, 'link1')
+              react.DOM.a({href: '/colors'}, 'Colors')
             ),
             react.DOM.li(null,
-              react.DOM.a({href: '/link'}, 'link2')
+              react.DOM.a({href: '/icons'}, 'Icons')
+            ),
+            react.DOM.li(null,
+              react.DOM.a({href: '/illustrations'}, 'Illustrations')              
+            ),
+            react.DOM.li(null,
+              react.DOM.a({href: '/logo'}, 'Logo')
             )
           )
         ),
@@ -71,10 +77,16 @@ module.exports = react.createClass({
           ),
           react.DOM.section(null,
             react.DOM.li(null,
-              react.DOM.a({href: '/link'}, 'link1')
+              react.DOM.a({href: '/code/order'}, 'Order')
             ),
             react.DOM.li(null,
-              react.DOM.a({href: '/link'}, 'link2')
+              react.DOM.a({href: '/code/syntax'}, 'Syntax')
+            ),
+            react.DOM.li(null,
+              react.DOM.a({href: '/code/functions'}, 'Functions')
+            ),
+            react.DOM.li(null,
+              react.DOM.a({href: '/code/dotfiles'}, 'Dotfiles')
             )
           )
         )
