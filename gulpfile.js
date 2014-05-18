@@ -13,14 +13,15 @@ var gulp = require('gulp');
 /**
  * Compile CSS
  *
- * Includes reset.css first, then all files in '/base'
- * then all other css files.
+ * Includes css files in the following order
+ * /base/reset.css > /base/vars.css > /base/*.css > all other css files.
  */
 
 gulp.task('styles', function() {
   gulp
-    .src(['client/modules/index/reset.css', 
-      'client/modules/index/!(reset)*.css', 
+    .src(['client/modules/index/reset.css',
+      'client/modules/index/vars.css',
+      'client/modules/index/!(reset, vars)*.css', 
       'client/modules/!(index)**/*.css'
     ])
     .pipe(concat('build.css'))
@@ -41,10 +42,21 @@ gulp.task('modules', function() {
 });
 
 /**
+ * Copy files
+ */
+
+gulp.task('assets', function() {
+  gulp
+    .src(['client/modules/index/*.ttf'])
+    .pipe(gulp.dest('build/fonts/'));
+});
+
+/**
  * Default
  */
 
 gulp.task('default', [
   'styles',
-  'modules'
+  'modules',
+  'assets'
 ]);

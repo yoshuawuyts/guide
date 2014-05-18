@@ -17,3 +17,9 @@ module.exports = react.createClass({
     )
   }
 });
+
+/*
+      dangerouslySetInnerHTML: {
+        __html: marked(content)
+      }
+*/      

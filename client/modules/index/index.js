@@ -11,7 +11,7 @@ var home = require('../../views/home.js');
  */
 
 router('/', render(home()));
-// router('/code', render(code()));
+// router('/code', render(home()));
 // router('/style', render(style()));
 // router('/docs', render(docs()));
 
@@ -23,5 +23,6 @@ router('/', render(home()));
  */
 
 function render(view) {
+  console.log(view);
   react.renderComponent(view, document.getElementById('root'));
 }
