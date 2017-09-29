@@ -31,6 +31,6 @@
     "brfs": "^1.1.1",
     "vinyl-source-stream": "^0.1.1",
     "browserify": "^4.1.5",
-    "gulp-livereload": "^1.5.0"
+    "gulp-livereload": "^3.8.1"
   }
 }
